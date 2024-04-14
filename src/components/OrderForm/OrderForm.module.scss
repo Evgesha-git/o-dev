@@ -1,0 +1,99 @@
+.form {
+    max-width: 708px;
+    width: 100%;
+    margin: 243px auto 0;
+    padding: 10px;
+    border-radius: 15px;
+    background: #d9d9d9;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.57px;
+}
+
+.item {
+    margin-bottom: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc {
+    display: flex;
+    gap: 10px;
+}
+
+.inputs {
+    display: flex;
+    gap: 17px;
+    margin-top: 20px;
+}
+
+.input {
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 15px;
+    background: #222222;
+    border: none;
+    width: 100%;
+    max-width: 401px;
+    color: #f0f0f0;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.57px;
+}
+
+.button {
+    padding: 12px;
+    max-width: 268px;
+    width: 100%;
+    border-radius: 15px;
+    background: #222222;
+    border: none;
+    box-sizing: border-box;
+    color: #f0f0f0;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.57px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.inputCon{
+    position: relative;
+}
+
+.error{
+    position: absolute;
+    color: red;
+    font-size: 18px;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 764px) {
+    .form{
+        margin-top: 164px;
+    }
+    .inputs{
+        flex-direction: column;
+    }
+
+    .input{
+        width: 100%;
+        max-width: 100%;
+    }
+    .button{
+        width: 100%;
+        max-width: 100%;
+    }
+}

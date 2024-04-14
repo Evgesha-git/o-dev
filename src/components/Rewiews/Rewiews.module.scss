@@ -1,0 +1,43 @@
+.rewiews {
+    margin-top: 105px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 27px;
+}
+
+.card {
+    max-width: 468px;
+    width: 100%;
+    border-radius: 15px;
+    background: #d9d9d9;
+    padding: 20px 26px 28px;
+    box-sizing: border-box;
+
+    h1 {
+        margin-bottom: 28px;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29.05px;
+    }
+
+    p {
+        margin-bottom: 16px;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29.05px;
+    }
+
+    script{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .rewiews{
+        gap: 22px;
+        margin-top: 97px;
+    }
+}

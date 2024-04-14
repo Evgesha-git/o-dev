@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+
+import Rewiews from './components/Rewiews';
+import OrderForm from './components/OrderForm';
+import { useAction, useAppDispatch, useAppSelector } from './hooks/redux';
+import { TCart, cartSlice } from './store/reducers/cartReducer'
+import Shop from './components/Shop';
+import style from './App.module.css';
+
 
 function App() {
+  const { products, loading } = useAppSelector(state => state.shop);
+  const { getShopData } = useAction()
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (localStorage.getItem('cart')) {
+      const cartString = localStorage.getItem('cart');
+      if (cartString) {
+        const cart: TCart[] = JSON.parse(cartString);
+        dispatch(cartSlice.actions.setData(cart));
+      }
+    }
+  });
+
+  useEffect(() => {
+    if (!loading) {
+      getShopData(1);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.App}>
+      <h1 className={style.title}>тестовое задание</h1>
+      <Rewiews />
+      <OrderForm />
+      <Shop />
     </div>
   );
 }

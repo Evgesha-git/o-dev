@@ -1,0 +1,27 @@
+.App {
+    max-width: 1442px;
+    margin: 0 auto;
+    padding: 55px 14px 388px;
+}
+
+.title {
+    color: #f0f0f0;
+    font-family: Inter;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 116.18px;
+    text-align: center;
+    padding: 6px 74px;
+    border-radius: 15px;
+    background: #777777;
+}
+
+@media screen and (max-width: 526px) {
+    .title {
+        font-size: 40px;
+        line-height: 48.41px;
+    }
+    .App {
+        padding: 13px 14px 227px;
+    }
+}
